@@ -1,4 +1,7 @@
-PROC IMPORT datafile = 'C:/Users/andrewmoore1/Documents/example-data/midwest.csv' dbms = csv out = midwest replace;
+PROC IMPORT datafile = 'C:/Users/andrewmoore1/Documents/example-data/data/midwest.csv'
+            dbms = csv
+            out = midwest
+            replace;
      delimiter = ',';
 RUN;
 
