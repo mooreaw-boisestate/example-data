@@ -1,11 +1,12 @@
-PROC IMPORT datafile = 'C:/Users/andrewmoore1/Desktop/example-data/data/midwest.csv'
+filename mwdata url 'https://raw.githubusercontent.com/mooreaw-boisestate/example-data/main/data/midwest.csv';
+
+PROC IMPORT datafile = mwdata
             dbms = csv
             out = midwest
             replace;
      delimiter = ',';
 RUN;
 
-/* Add a comment. */
 DATA mw2;
      set midwest;
      keep PID county state poptotal popdensity percbelowpoverty percadultpoverty inmetro;
