@@ -1,5 +1,5 @@
 filename mwdata url 'https://raw.githubusercontent.com/mooreaw-boisestate/example-data/main/data/midwest.csv';
-
+/* test comment */
 PROC IMPORT datafile = mwdata
             dbms = csv
             out = midwest
