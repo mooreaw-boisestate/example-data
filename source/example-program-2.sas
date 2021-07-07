@@ -3,6 +3,6 @@ PROC SORT data = mw2 out = mw2_sorted;
 RUN;
 
 PROC MEANS data = mw2_sorted;
-     var percadultpoverty percbelowpoverty;
-     by state inmetro;
+     var percadultpoverty percbelowpoverty inmetro;
+     by state;
 RUN;
