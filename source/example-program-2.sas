@@ -21,3 +21,8 @@ PROC FREQ data = mw2_sorted;
      tables state*inmetro / chisq;
      format state $state. inmetro inmetro.;
 RUN;
+
+PROC MEANS data = mw2_sorted;
+     var percadultpoverty percbelowpoverty inmetro;
+     by state;
+RUN;
