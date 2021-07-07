@@ -29,4 +29,5 @@ RUN;
 
 PROC SGPLOT data = mw2_sorted;
      density percadultpoverty / group = state;
+     density perchsd / group = state;
 RUN;
