@@ -26,3 +26,7 @@ PROC MEANS data = mw2_sorted;
      var percadultpoverty percbelowpoverty inmetro;
      by state;
 RUN;
+
+PROC SGPLOT data = mw2_sorted;
+     density percadultpoverty / group = state;
+RUN;
