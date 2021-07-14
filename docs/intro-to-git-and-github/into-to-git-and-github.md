@@ -49,7 +49,7 @@ Each file and folder placed in a Git repository can be tracked (although, as I m
 
 Commits are linked together on **branches.** I'll discuss this concept in more detail later, but for now, think of each commit as growth on a tree. Below is an annotated view of the commits in an example repository. It's presented as a timeline, with the first commit occurring on 4/26.
 
-![](img/branch-timeline.png)
+![](./img/branch-timeline.PNG)
 
 1. Each individual commit is a dot on the timeline. You can see that lots of development could take place on the same day, or commits might be spaced out over time.
 
