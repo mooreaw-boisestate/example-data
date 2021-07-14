@@ -47,31 +47,17 @@ As we work on required changes, we'll often create different versions of code an
 
 Each file and folder placed in a Git repository can be tracked (although, as I mentioned above, there are some that might be worth excluding due to privacy/security concerns). When you create, modify, or delete one or more files in a repository, you can save the state of the file(s) with a **commit.** When committing one or more files, you're taking a snapshot of the file(s), telling Git to preserve what things look like when you make the commit. This is a little different from how version control works in (for example) Google Docs, but with computer code, we often test things that might not work at first. It's helpful to not preserve changes until we know we're ready. Once you've modified every file related to a change or request, you **stage** the files, and write a **commit message** that briefly summarizes what you've modified.
 
-It's somewhat common to represent the history of a project as a directed graph. I've made a crude diagram depicting a project with two **branches** of code. Each `*` is an individual commit that one of the project team-members created. The most recent commit is referred to as the **head**, and represents the last preserved-state of the project. Back at the beginning of the project, you can see that a development branch diverged from the initial commit, where 3 commits were added. These might reflect solving a bug, or adding new functionality to the project code. Then, this code under development is merged back into the main branch.
+Commits are linked together on **branches.** I'll discuss this concept in more detail later, but for now, think of each commit as growth on a tree. Below is an annotated view of the commits in an example repository. It's presented as a timeline, with the first commit occurring on 4/26.
 
-```
-^       <- the FUTURE!
-|
-*       <- The *HEAD* of the project
-|
-*
-|\
-* \
-|  \
-|   \
-*    *  <- A *Commit* on a branch. Each commit has an author,
-|    |     timestamp, and unique ID. Each commit also has a commit
-|    |     message, which are used to describe changes introduced.
-|    *
-|    |
-*    *
-|    |
-*   /  
-|  /
-| /
-|/
-*       <- The *first* commit of the project
-```
+![](img/branch-timeline.png)
+
+1. Each individual commit is a dot on the timeline. You can see that lots of development could take place on the same day, or commits might be spaced out over time.
+
+2. Here we see a development branch that diverged from the project main. I've hovered over one of the commits, so you can see its summary, the author, and its unique identifier. Two more commits were added after it on this branch.
+
+3. Now we see the commits from the green branch being *merged* back onto the project `main`. This commit is referred to as a *merge commit*. As you can see later on 7/7, you're free to merge from `main` back onto the development branch, too. Here, you can think of this as bringing the development branch back up to sync with `main`. Any branch within a repository can be merged to another branch within the same repository (assuming there aren't direct conflicts on edits between modified files; in this case, you'd need to decide which versions to keep).
+
+4. The most recent commit is referred to as the branch's **head.** This is the current state of the project.
 
 ## Working Locally
 
@@ -183,6 +169,8 @@ Steps must be completed in order:
 
 ![](img/sas-epg-3-open-programs-from-repo.png)
 
+The source files will be marked as *shortcuts* to the place they're stored in the Git Repo, rather than embedded in the project file. However, if you pass the project folder to someone else, the relative paths should ensure they can open things up and run the code.
+
 ## Markdown
 
 As you have seen, a lot of what Git/GitHub facilitates is communication and documentation. Thus, writing is a pretty important part of working with this tool! In many places you can write text, GitHub can interpret it as [***Markdown***](https://guides.github.com/features/mastering-markdown/). Markdown is a lightweight syntax for styling writing/text on the web. Mostly, it looks like regular text, but certain symbols are used to denote formatting.
@@ -192,6 +180,8 @@ Some places where GitHub will recognize markdown formatting are:
 - Issue/Pull-Request Descriptions
 - Comments in Issues or Pull Requests
 - Files with a `.md` or `.markdown` extension
+
+Reading through this guide is highly recommended (and it's short!): https://guides.github.com/features/mastering-markdown/
 
 #### Examples
 
@@ -237,6 +227,3 @@ Bullet Points:
 - Or a dash
   * Sub points can be added by putting two spaces before the dash/star/plus
   - I usually use dashes, and stick to a single symbol to denote bullets within a list. Stars (`*`) aren't ideal, because they're also used for *emphasis/bolding.*
-
-
-Reading through this guide is highly recommended (and it's short!): https://guides.github.com/features/mastering-markdown/
