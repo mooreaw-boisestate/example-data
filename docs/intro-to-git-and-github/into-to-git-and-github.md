@@ -61,7 +61,7 @@ Commits are linked together on **branches.** I'll discuss this concept in more d
 
 ## Working Locally
 
-So, what does this look like in practice? We get a running history that marks changes to files over time, with explanations/descriptions of edits by each author. Starting now, I'll show some examples from a local repository used to track code for the PMAP/SLDS project. Here's a snapshot of the commit history for the repository (highlighted in red). I'm using GitHub's desktop application to view things.
+So, what does this look like in practice? We get a running history that marks changes to files over time, with explanations/descriptions of edits by each author. Starting now, I'll show some examples from the `example-data` repository. Here's a snapshot of the commit history for the repository (highlighted in red). I'm using GitHub's desktop application to view things locally.
 
 ![](img/github-desktop-history-pane.png)
 
