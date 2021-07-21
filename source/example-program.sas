@@ -10,4 +10,5 @@ RUN;
 DATA mw2;
      set midwest;
      keep PID county state poptotal popdensity perchsd percbelowpoverty percadultpoverty inmetro;
+	 where state <> 'MI';
 RUN;
