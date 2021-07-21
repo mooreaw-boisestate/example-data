@@ -2,7 +2,7 @@ PROC SORT data = mw2 out = mw2_sorted;
      by state inmetro;
 RUN;
 
-/* Add formats for state and the metro indicator */
+/* Editing Comment Test */
 PROC FORMAT;
      value $state
            'IL' = 'Illinois'
